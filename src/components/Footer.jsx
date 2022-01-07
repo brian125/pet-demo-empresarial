@@ -3,9 +3,12 @@ import React from 'react'
 const Footer = () => {
     return (
         <footer className='footer'>
-           El Footer del brayan
+           <div className='text-footer'>
+            <p>¡Todos los días son una oportunidad para aprender algo nuevo!</p>
+            <p>Brayan Silva &copy; 2022</p>
+           </div>
         </footer>
     )
 }
 
-export default Footer
+export default Footer;
