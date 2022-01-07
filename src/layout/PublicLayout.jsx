@@ -48,9 +48,10 @@ useEffect(()=>{
             <Navbar elements={publicNavbar}/>
             <Outlet/>
             <div className="google">
-                <button className="button" onClick={handler}>Inicio sesion con google</button>
-            </div>
+                <button className="button" onClick={handler}>Iniciar sesión con google</button>
+            </div> 
             <Footer/>
+
         </div>
     )
 }
