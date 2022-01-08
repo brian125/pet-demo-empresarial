@@ -26,10 +26,11 @@ const FormAnswer = ({idQuestion}) => {
 
         <div>
             <form onSubmit={submitForm}>
-                <h1>Respuestas</h1>
-                <label>Añade una respuesta.</label>
+                
+                <label className='sub-respuesta'>Añade una respuesta.</label>
                 <TextEditor body={body} setBody={setBody}/>
-                <button type="submit">Enviar Respuesta</button>
+                <button className='button' type="submit">Enviar Respuesta</button>
+                <h2>Respuestas</h2>
             </form>
         </div>
 

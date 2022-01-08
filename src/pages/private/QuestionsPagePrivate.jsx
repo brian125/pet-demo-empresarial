@@ -15,16 +15,18 @@ const QuestionsPagePrivate = () => {
     const [ filtro, setFiltro ] = useState("");
     
     return (
-        <div className='contenedor'>
-
+        <div className='contenedor2'>
+            <div className='busqueda'>
+            <img className='ico-1' src="/outline_search_black_24dp.png" alt="" />
             <input
-                className="form-control  mb-3 "
+                className="panel-busqueda"
                 placeholder="Buscar preguntas"
                 type="text"
                 onChange={(e) => setFiltro(e.target.value.toUpperCase())}
             ></input>
+            </div>
 
-            <h1>private</h1>
+            <h2 className='sub-respuesta'>Preguntas</h2>
             {error&& <h1>{error}</h1>}
             {questions && 
             questions.filter(

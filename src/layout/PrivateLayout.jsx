@@ -44,9 +44,6 @@ const PrivateLayout = () => {
         ?(<div>
             <Navbar elements={privateNavbar} />
             <Outlet/>
-            <div className="google">
-                <button className="button" onClick={handler}>Cerrar sesión</button>
-            </div>
             <Footer/>
         </div>)
         :

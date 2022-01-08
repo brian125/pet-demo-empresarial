@@ -24,12 +24,13 @@ const OneQuestionPagePrivate = () => {
             {oneQuestion && 
             <>
                  <OneQuestionPrivate oneQuestion={oneQuestion}/>
+                 
+                 <FormAnswer idQuestion={oneQuestion.id}></FormAnswer>
                  {oneQuestion.answers&&oneQuestion.answers.map((answer)=>{
                      return(
                          <ViewAnswer key={answer.id} answer={answer} />
                      )
                  }) }
-                 <FormAnswer idQuestion={oneQuestion.id}></FormAnswer>
             </>     
             }
             

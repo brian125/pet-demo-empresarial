@@ -14,7 +14,7 @@ const TextEditor = ({body, setBody}) => {
     return (
         <div>
             <form>
-                <ReactQuill 
+                <ReactQuill className='quill-editor'
                     placeholder='Ingresa una pregunta/respuesta'
                     modules={TextEditor.modules}
                     formats={TextEditor.formats}
