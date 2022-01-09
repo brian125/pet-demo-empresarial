@@ -15,7 +15,6 @@ const Navbar = ({elements}) => {
         dispatch(logoutAction())
         navigate("/")
     }
-
     
     return (
         <div className="nav-bar">

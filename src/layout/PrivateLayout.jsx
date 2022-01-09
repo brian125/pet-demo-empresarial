@@ -17,12 +17,6 @@ const PrivateLayout = () => {
     const dispatch = useDispatch()
     const navigate=useNavigate()
 
-    const handler=()=>{
-        app.auth().signOut()
-        dispatch(logoutAction())
-        navigate("/")
-    }
-
     useEffect(()=>{
         app.auth().onAuthStateChanged((user)=>{
             if(user){

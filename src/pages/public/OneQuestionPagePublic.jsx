@@ -1,5 +1,5 @@
 import { useDispatch,useSelector } from "react-redux";
-import { loadById } from '../../app/middleware/payloadQuestions';
+import { loadById, postAnswer } from '../../app/middleware/payloadQuestions';
 import OneQuestionPublic from '../../components/public/OneQuestionPublic';
 import {useEffect} from'react'
 import { useParams } from "react-router-dom";
@@ -17,8 +17,8 @@ const OneQuestionPagePublic = () => {
     },[])
   
     return (    
-        <>
-        <h1>public</h1>
+        <div className="contenedor2">
+        <h2 className="sub-respuesta">Respuestas</h2>
         {oneQuestion&&(
         <>
         <OneQuestionPublic question={oneQuestion}/>
@@ -28,7 +28,8 @@ const OneQuestionPagePublic = () => {
                 )})}
         </>
         )}
-        </>
+        
+        </div>
     )
 }
 

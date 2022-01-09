@@ -15,7 +15,7 @@ const QuestionsPagePrivate = () => {
     const [ filtro, setFiltro ] = useState("");
     
     return (
-        <div className='contenedor2'>
+        <div className='contenedor2 question-table'>
             <div className='busqueda'>
             <img className='ico-1' src="/outline_search_black_24dp.png" alt="" />
             <input

@@ -47,9 +47,10 @@ body {
 }
 
 .contenedor2{
-  height: 75vh; 
+  min-height: 76.4VH;
   background-color: #f0f2f5;
 }
+
 
 .nav-bar {
   display: flex;
@@ -67,7 +68,7 @@ body {
 }
 
 .footer{
-  height: 10vh;
+  width: 100%;
   background-color: #333;
   color: white;
   box-shadow: 0px 1px 5px #4CAF50;
@@ -109,6 +110,7 @@ h1 {
   width: 850px;
   margin: auto;
   margin-top: 20px;
+  margin-bottom: 30px;
 }
 
 .sub-respuesta{
@@ -139,4 +141,63 @@ h1 {
 .ico-1 {
   position: absolute;
   margin-top: 5px;
+}
+
+.question-table{
+  padding-bottom: 35px;
+}
+
+.pregunta {
+  width: 65%;
+  border: 1px solid black;
+  border-radius: 10px;
+  margin: auto;
+  margin-top: 10px;
+  background-color: white;
+  box-shadow: 3px 3px black;
+}
+
+.pregunta:hover{
+  background-color: rgb(236, 236, 236);
+}
+
+.spans-position {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.span-category {
+  font-family: 'Roboto', sans-serif;
+  min-width: 100px;
+  font-size: 10px;
+  border: 1px #043240 solid;
+  border-radius: 10px;
+  background-color: #043240;
+  color: white;
+  margin-left: 50px;
+  margin-right: 25px;
+}
+
+.span-type{
+  font-family: 'Roboto', sans-serif;
+  min-width: 100px;
+  font-size: 10px;
+  border: 1px #BA8C73 solid;
+  border-radius: 10px;
+  background-color: #BA8C73;
+  color: white;
+  margin-left: 50px;
+  margin-right: 25px;
+}
+
+.pregunta-text{
+  display: flex;
+  font-family: 'Roboto', sans-serif;
+  font-size: 25px;
+  margin-left: 50px;
+}
+
+.btn-detalle{
+  text-decoration: none;
+  color: black;
 }

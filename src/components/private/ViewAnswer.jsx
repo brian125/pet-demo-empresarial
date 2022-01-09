@@ -4,8 +4,7 @@ import '../../../node_modules/react-quill/dist/quill.snow.css';
 const ViewAnswer = ({answer}) => {  
 
     return(
-        <div className='question'>
-
+        <div>
                 <ReactQuill className='quill-editor'
                     readOnly='true'
                     preserveWhitespace='false'

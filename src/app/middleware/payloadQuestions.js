@@ -73,10 +73,12 @@ export const postAnswer=(answer)=> (dispatch ) => {
 }
 
 
-export const deleteQuestion=(id)=>{
+export const deleteQuestion=(id, myQuestions)=> (dispatch) => {
     const options = {method: 'DELETE', url: `http://localhost:8080/delete/${id}`};
 
         axios.request(options).then(function (response) {
+        const deleteo = myQuestions.filter(question => question.id !== id)
+        dispatch(myQuestionsLoadSucces(deleteo))
         console.log(response.data);
         }).catch(function (error) {
         console.error(error);

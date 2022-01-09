@@ -14,16 +14,16 @@ const QuestionsPagePublic = () => {
   
     
     return (
-        <>
-            <h1>public</h1>
+        <div className='contenedor2 question-table'>
+            <h2 className='sub-pregunta'>¡Preguntas Hechas!</h2>
             {error&& <h1>{error}</h1>}
             {questions && questions.map((question)=>{
                 return(
                     <QuestionPublic key={question.id} question={question}/>
                 )
-               
             })}
-        </>
+            
+        </div>
     )
 }
 

@@ -16,7 +16,7 @@ const TextEditor = ({body, setBody}) => {
         <div>
             <form>
                 <ReactQuill className='quill-editor'
-                    placeholder='Ingresa una pregunta/respuesta'
+                    placeholder='Escribe acá...'
                     modules={TextEditor.modules}
                     formats={TextEditor.formats}
                     onChange={handlerBody}
