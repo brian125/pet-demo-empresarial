@@ -20,8 +20,6 @@ const Navbar = ({elements}) => {
     return (
         <div className="nav-bar">
             <img className="logo" src="/images/logo.png" alt="Logo" />
-           
-
             {state.user ? 
                 <button className="button-nav btn-sesion" onClick={handler}>Cerrar sesión</button>
             : null}

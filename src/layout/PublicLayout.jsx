@@ -39,9 +39,6 @@ useEffect(()=>{
         }
 })},[])
 
-
-
-
     return (
         <div>
             

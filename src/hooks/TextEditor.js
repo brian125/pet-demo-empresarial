@@ -8,6 +8,7 @@ const TextEditor = ({body, setBody}) => {
     const dispatch = useDispatch();
 
     const handlerBody = e => {
+        console.log(e);
         setBody(e);
     }
 
@@ -32,7 +33,7 @@ TextEditor.modules = {
         [{ size: [] }],
         [ "bold", "italic", "underline", "strike", "blockquote" ],
         [{ list: "ordered", }, { list: "bullet" }],
-        ["link", "image", "video"],
+        ["image"],
         ["clean"],
         ["code-block"],
     ],

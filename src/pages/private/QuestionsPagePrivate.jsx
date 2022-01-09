@@ -26,7 +26,7 @@ const QuestionsPagePrivate = () => {
             ></input>
             </div>
 
-            <h2 className='sub-respuesta'>Preguntas</h2>
+            <h2 className='sub-pregunta'>Preguntas</h2>
             {error&& <h1>{error}</h1>}
             {questions && 
             questions.filter(

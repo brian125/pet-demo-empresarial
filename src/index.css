@@ -118,10 +118,17 @@ h1 {
   font-family: 'Roboto', sans-serif;
 }
 
+.sub-pregunta {
+  font-size: 40px;
+  color: #4CAF50;
+  font-family: 'Roboto', sans-serif;
+}
+
 .busqueda {
   display: flex;
   justify-content: flex-end;
-  padding: 35px;
+  padding-right: 35px;
+  padding-top: 35px;
 }
 
 .panel-busqueda {
