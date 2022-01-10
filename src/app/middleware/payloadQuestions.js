@@ -55,21 +55,21 @@ export const postQuestion=(question, navigate)=>{
 }
 
 
-export const postAnswer=(answer)=> (dispatch ) => {
+export const postAnswer=( answer ) => ( dispatch ) =>{
 
-    const options = {
-        method: 'POST',
-        url: 'http://localhost:8080/add',
-        headers: {'Content-Type': 'application/json'},
-        data: answer
-      };
-      
-      axios.request(options).then(function (response) {
-        console.log(response.data);
-        dispatch(oneQuestionLoadSucces(response.data))
-      }).catch(function (error) {
-        console.error(error);
-      });
+  const options = {
+      method: 'POST',
+      url: 'http://localhost:8080/answer/add',
+      headers: {'Content-Type': 'application/json'},
+      data: answer
+    };
+    console.log(answer, "answer")
+    axios.request(options).then(function (response) {
+      console.log(response.data, "response.data");
+      dispatch(oneQuestionLoadSucces(response.data))
+    }).catch(function (error) {
+      console.error(error);
+    });
 }
 
 

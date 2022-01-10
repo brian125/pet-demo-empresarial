@@ -8,13 +8,10 @@ import {useNavigate } from 'react-router-dom';
 
 const FormQuestion = () => {
 
-    const state =useSelector(state=>state.auth)
-
-    const dispatch = useDispatch();
-    const [body, setBody] = useState("");
-    const navigate = useNavigate()
-
-    const{form, formData, updateFormData} = useFormData();
+  const navigate = useNavigate()
+  const state =useSelector(state=>state.auth)
+  const [ body, setBody ] = useState("");
+  const{form, formData, updateFormData} = useFormData();
 
     const submitForm = (e) => {
         e.preventDefault();
@@ -23,7 +20,8 @@ const FormQuestion = () => {
           userId: form.current[0].value,
           question: body,
           type: form.current[1].value,
-          category: form.current[2].value
+          category: form.current[2].value,
+          email: state.user.email
         }
         postQuestion(data,navigate);
       }
