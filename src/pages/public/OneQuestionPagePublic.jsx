@@ -1,4 +1,4 @@
-import { useDispatch,useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { loadById, postAnswer } from '../../app/middleware/payloadQuestions';
 import OneQuestionPublic from '../../components/public/OneQuestionPublic';
 import {useEffect} from'react'
@@ -12,9 +12,10 @@ const OneQuestionPagePublic = () => {
     const {oneQuestion} = useSelector(state => state.oneQuestion)
 
     useEffect(()=>{
-      dispatch(loadById(id))
-      console.log(oneQuestion)
-    },[])
+      dispatch(loadById(id));
+      console.log(id);
+      console.log("aparece", oneQuestion);
+    },[]) 
   
     return (    
         <div className="contenedor2">

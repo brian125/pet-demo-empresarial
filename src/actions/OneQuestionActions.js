@@ -4,7 +4,7 @@ import ActionsTypeOneQuestion from "./actionsTypes/ActionsTypeOneQuestion";
 export const oneQuestionLoadSucces=(question)=>{
     return {
         type:ActionsTypeOneQuestion.LOAD_SUCCESS_QUESTION,
-        payload:question
+        payload: question
     }
 }
 

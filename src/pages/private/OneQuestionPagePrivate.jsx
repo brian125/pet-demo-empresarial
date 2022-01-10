@@ -14,9 +14,10 @@ const OneQuestionPagePrivate = () => {
     const {oneQuestion} = useSelector(state => state.oneQuestion)
 
     useEffect(()=>{
-      dispatch(loadById(id))
+      dispatch(loadById(id));
+      console.log("aparece ", oneQuestion);
     },[])
-    console.log("aparece ", oneQuestion);
+    
 
     const deleteAnswers = (id) => {
         const Swal = require('sweetalert2')

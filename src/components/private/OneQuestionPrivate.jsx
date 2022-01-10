@@ -12,7 +12,7 @@ const OneQuestionPrivate = ({oneQuestion}) => {
             value={oneQuestion.question}
             modules={OneQuestionPrivate.modules}
             theme="bubble"
-                        />
+                        /> 
           <div className="spans-position">
             <span className="span-category">{oneQuestion.category}</span>
             <span className="span-type">{oneQuestion.type}</span>

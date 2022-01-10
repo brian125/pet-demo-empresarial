@@ -6,7 +6,7 @@ const ViewAnswer = ({ answer, deleteAnswer }) => {
   const state = useSelector((state) => state.auth);
 
   return (
-    <div className="vista-respuestas">
+    <div>
       <div>
         <ReactQuill
           className="quill-editor"
@@ -16,8 +16,8 @@ const ViewAnswer = ({ answer, deleteAnswer }) => {
           modules={ViewAnswer.modules}
         />
       </div>
-      <div className="boton-eliminar-respuesta">
-        {state.user.uid === answer.userId ? deleteAnswer && (
+      <div className="boton-eli">
+        {deleteAnswer && (
           <button
             className="button"
             id={answer.id}
@@ -25,7 +25,7 @@ const ViewAnswer = ({ answer, deleteAnswer }) => {
           >
             Eliminar Respuesta
           </button>
-        ):null}
+        )}
         {console.log(answer.id, "id")}
       </div>
     </div>

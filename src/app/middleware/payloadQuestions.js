@@ -30,8 +30,11 @@ export const loadById=(id)=>(dispatch)=>{
         headers: {'Content-Type': 'application/json'}
         };
     
+        console.log(id, "Desde el payload");
         axios.request(options).then(function (response) {
-            dispatch(oneQuestionLoadSucces(response.data))
+          console.log(response.data, "LLEGOOOOO");
+          dispatch(oneQuestionLoadSucces(response.data));
+          console.log(response.data, "Despues del seccess");
         }).catch(function (error) {
             dispatch(oneQuestionLoadError(error.message))
         });
@@ -90,7 +93,6 @@ export const deleteAnswer = (id) => (dispatch) => {
     method: 'DELETE',
     url: `http://localhost:8080/answer/delete/${id}`
   };
-  console.log(id, "id")
   axios.request(options).then(function (response) {
     dispatch(oneQuestionsDeleteAnswer(id))
   }).catch(function (error) {
