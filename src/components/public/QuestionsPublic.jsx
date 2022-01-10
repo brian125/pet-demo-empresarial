@@ -1,3 +1,4 @@
+import ReactQuill from "react-quill"
 import { Link } from "react-router-dom"
 
 const QuestionsPublic = ({question}) => {  
@@ -7,7 +8,13 @@ const QuestionsPublic = ({question}) => {
         <Link to={`/question/${question.id}`} className="btn-detalle">
         
             
-                <p className="pregunta-text">{question.question}</p>
+        <ReactQuill
+            className="quill-preguntas"
+            readOnly='true'
+            preserveWhitespace='false'
+            value={question.question}
+            modules={QuestionsPublic.modules}
+                        />
                 <div className="spans-position">
                 <span className="span-category">{question.category}</span>
                 <span className="span-type">{question.type}</span>
@@ -19,5 +26,7 @@ const QuestionsPublic = ({question}) => {
         </div>
     )
 }
+
+QuestionsPublic.modules = {toolbar: false}
 
 export default QuestionsPublic

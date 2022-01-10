@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const QuestionsPrivate = ({ question, deleteQuestion }) => {
   return (
-    <div>
+    <div className="question-position">
       <div className="pregunta">
         <Link to={`/private/question/${question.id}`} className="btn-detalle">
         <ReactQuill
@@ -18,8 +18,7 @@ const QuestionsPrivate = ({ question, deleteQuestion }) => {
             <span className="span-type">{question.type}</span>
           </div>
         </Link>
-      </div>
-      {deleteQuestion && (
+        {deleteQuestion && (
         <button
           className="button right"
           id={question.id}
@@ -28,6 +27,8 @@ const QuestionsPrivate = ({ question, deleteQuestion }) => {
           DELETE
         </button>
       )}
+      </div>
+      
     </div>
   );
 };

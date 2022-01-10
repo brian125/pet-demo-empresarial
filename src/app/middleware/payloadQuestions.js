@@ -1,5 +1,5 @@
 import { questionsLoading ,questionsLoadSucces,questionsLoadError } from "../../actions/QuestionsActions";
-import {oneQuestionLoadSucces , oneQuestionLoadError} from "../../actions/OneQuestionActions";
+import {oneQuestionLoadSucces , oneQuestionLoadError, oneQuestionsLoading, oneQuestionsDeleteAnswer} from "../../actions/OneQuestionActions";
 import { myQuestionsLoadSucces, myQuestionsLoading,myQuestionsLoadError } from "../../actions/MyQuestionsActions";
 import axios from "axios";
 
@@ -48,7 +48,6 @@ export const postQuestion=(question, navigate)=>{
       };
       
       axios.request(options).then(function (response) {
-        console.log(response.data);
         navigate("/private/QuestionsPage")
       }).catch(function (error) {
         console.error(error);
@@ -86,6 +85,19 @@ export const deleteQuestion=(id, myQuestions)=> (dispatch) => {
         });
 }
 
+export const deleteAnswer = (id) => (dispatch) => {
+  dispatch(oneQuestionsLoading())
+  const options = {
+    method: 'DELETE',
+    url: `http://localhost:8080/answer/delete/${id}`
+  };
+  console.log(id, "id")
+  axios.request(options).then(function (response) {
+    dispatch(oneQuestionsDeleteAnswer(id))
+  }).catch(function (error) {
+    dispatch(oneQuestionLoadError(error.message))
+  });
+}
 
 export const getUserQuestion=(userId)=>(dispatch)=>{
 

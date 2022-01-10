@@ -18,6 +18,7 @@ const FormQuestion = () => {
 
     const submitForm = (e) => {
         e.preventDefault();
+        console.log();
         const data = {
           userId: form.current[0].value,
           question: body,
@@ -35,34 +36,27 @@ const FormQuestion = () => {
               <br />
               <TextEditor body={body} setBody={setBody}/>
                 <input  required name="userId" hidden type="text" value={state.user.uid} placeholder='Ingresa una pregunta acá'></input>
-                <label className="font-medium">Type</label>
+                <label className="label-tc">Tipo</label>
                 {/* <input required name="question" type="text" placeholder='Ingresa una pregunta acá'></input> */}
-                <select required className="" name="type" defaultValue="Type">
-                  <option disabled type="String" value="">Type</option>
+                <select required className="select-tc" name="type" defaultValue="Type">
+                  <option disabled type="String" value="">Tipo</option>
                   <option type="String">OPEN</option>
                   <option type="String">OPINION</option>
                   <option type="String">WHITH_RESULT</option>
                   <option type="String">WHITH_EVIDENCE</option>
                 </select>
-                <label className=" font-medium">Category</label>
-                <select required name="category"  defaultValue="Category">
-                  <option disabled type="String"  value="">Category</option>
-                  <option type="String">ARTES</option>
-                  <option type="String">CIENCIAS_AGRARIAS</option>
-                  <option type="String">CIENCIAS_ECONOMICAS</option>
-                  <option type="String">CIENCIAS_EXACTAS_NATURALES</option>
-                  <option type="String">CIENCIAS_FARMACEUTICAS_ALIMENTARIAS</option>
-                  <option type="String">CIENCIAS_SOCIALES_HUMANAS</option>
-                  <option type="String">COMUNICACIONES</option>
-                  <option type="String">DERECHO_CIENCIAS_POLITICAS</option>
-                  <option type="String">EDUCACION</option>
-                  <option type="String">ENFERMERIA</option>
-                  <option type="String">INGENIERIA</option>
-                  <option type="String">MEDICINA</option>
-                  <option type="String">ODONTOLOGIA</option>
-                  <option type="String">SALUD_PUBLICA</option>
+                <label className="label-tc">Categoria</label>
+                <select required className='select-tc' name="category"  defaultValue="Category">
+                  <option disabled type="String"  value="">Categoria</option>
+                  <option type="String">TECHNOLOGY_AND_COMPUTER</option>
+                  <option type="String">SCIENCES</option>
+                  <option type="String">SOFTWARE_DEVELOPMENT</option>
+                  <option type="String">SOCIAL_SCIENCES</option>
+                  <option type="String">LANGUAGE</option>
+                  <option type="String">COMPUTER</option>
                 </select>
-                <button type="submit">Enviar</button>
+                <br />
+                <button className='button btn-preguntas' type="submit">Enviar</button>
             </form>
         </div>
     )

@@ -1,6 +1,6 @@
 export const publicNavbar=[
     {
-        titulo: 'Home',
+        titulo: 'Inicio',
         url:'/',
     },
     {
