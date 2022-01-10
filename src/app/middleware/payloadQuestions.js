@@ -9,7 +9,7 @@ export const loadAllQuestion=()=>(dispatch)=>{
 
     const options = {
     method: 'GET',
-    url: 'http://localhost:8080/getAll',
+    url: 'https://pet-demo-empresarial.herokuapp.com/getAll',
     headers: {'Content-Type': 'application/json'}
     };
 
@@ -26,7 +26,7 @@ export const loadById=(id)=>(dispatch)=>{
 
     const options = {
         method: 'GET',
-        url: `http://localhost:8080/get/${id}`,
+        url: `https://pet-demo-empresarial.herokuapp.com/get/${id}`,
         headers: {'Content-Type': 'application/json'}
         };
     
@@ -44,7 +44,7 @@ export const postQuestion=(question, navigate)=>{
 
     const options = {
         method: 'POST',
-        url: 'http://localhost:8080/create',
+        url: 'https://pet-demo-empresarial.herokuapp.com/create',
         headers: {'Content-Type': 'application/json'},
         data: question
       };
@@ -61,7 +61,7 @@ export const postAnswer=( answer ) => ( dispatch ) =>{
 
   const options = {
       method: 'POST',
-      url: 'http://localhost:8080/answer/add',
+      url: 'https://pet-demo-empresarial.herokuapp.com/answer/add',
       headers: {'Content-Type': 'application/json'},
       data: answer
     };
@@ -76,7 +76,8 @@ export const postAnswer=( answer ) => ( dispatch ) =>{
 
 
 export const deleteQuestion=(id, myQuestions)=> (dispatch) => {
-    const options = {method: 'DELETE', url: `http://localhost:8080/delete/${id}`};
+    const options = {method: 'DELETE', 
+    url: `https://pet-demo-empresarial.herokuapp.com/delete/${id}`};
 
         axios.request(options).then(function (response) {
         const deleteo = myQuestions.filter(question => question.id !== id)
@@ -91,7 +92,7 @@ export const deleteAnswer = (id) => (dispatch) => {
   dispatch(oneQuestionsLoading())
   const options = {
     method: 'DELETE',
-    url: `http://localhost:8080/answer/delete/${id}`
+    url: `https://pet-demo-empresarial.herokuapp.com/answer/delete/${id}`
   };
   axios.request(options).then(function (response) {
     dispatch(oneQuestionsDeleteAnswer(id))
@@ -106,7 +107,7 @@ export const getUserQuestion=(userId)=>(dispatch)=>{
 
     const options = {
         method: 'GET',
-        url: `http://localhost:8080/getOwnerAll/${userId}`,
+        url: `https://pet-demo-empresarial.herokuapp.com/getOwnerAll/${userId}`,
         headers: {'Content-Type': 'application/json'}
       };
       axios.request(options).then(function (response) {
