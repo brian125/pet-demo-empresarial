@@ -42,13 +42,12 @@ const MyQuestions = (id) => {
 
     return (
         <div className="contenedor2">
-        {myQuestions && myQuestions.map((question)=>{
+        {myQuestions.length? myQuestions && myQuestions.map((question)=>{
             return(
                 <QuestionsPrivate key={question.id} question={question} deleteQuestion={sweetAlert}/>
                 )
-        })}
+        }) : <p>No tienes preguntas comienza creando una</p>}
             {error && <h1> Error {error} </h1>}
-
         </div>
     )
 }

@@ -19,6 +19,23 @@ const Navbar = ({elements}) => {
     return (
         <div className="nav-bar">
             <img className="logo" src="/images/logo.png" alt="Logo" />
+            
+            <ul className="navbar-links">
+
+                        {elements.map((item, index) => {
+                            return(
+                                <li key={index} className="nav-item active">
+                                    <Link
+                                    className="nav-item" style={{marginLeft: "20px"}}
+                                    to={item.url}
+                                    >
+                                        <span>{item.titulo}</span>
+                                    </Link>
+                                </li>
+                            )
+                        })}
+                    </ul>
+            
             {state.user ? 
                 <button className="button-nav btn-sesion" onClick={handler}>Cerrar sesión</button>
             : null}
