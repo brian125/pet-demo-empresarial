@@ -12,6 +12,7 @@ const QuestionsPrivate = ({ question, deleteQuestion }) => {
             preserveWhitespace='false'
             value={question.question}
             modules={QuestionsPrivate.modules}
+            theme="bubble"
                         />
           <div className="spans-position">
             <span className="span-category">{question.category}</span>

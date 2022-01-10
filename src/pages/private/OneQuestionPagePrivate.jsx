@@ -42,7 +42,7 @@ const OneQuestionPagePrivate = () => {
 
     return (
         <div className="contenedor2">  
-            <h1>private</h1>
+            <h1 className="sub-pregunta">Pregunta</h1>
             {oneQuestion && 
             <>
                  <OneQuestionPrivate oneQuestion={oneQuestion}/>

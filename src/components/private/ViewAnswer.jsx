@@ -19,7 +19,7 @@ const ViewAnswer = ({ answer, deleteAnswer }) => {
       <div className="col-1">
         {deleteAnswer && (
           <button
-            className="btn-danger"
+            className="button"
             id={answer.id}
             onClick={() => deleteAnswer(answer.id)}
           >

@@ -37,7 +37,6 @@ export const loadById=(id)=>(dispatch)=>{
         });
 }
 
-
 export const postQuestion=(question, navigate)=>{
 
     const options = {

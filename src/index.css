@@ -127,12 +127,12 @@ h1 {
   width: 850px;
   margin: auto;
   margin-top: 20px;
-  margin-bottom: 30px;
+  padding-bottom: 30px;
 }
 
 .sub-respuesta{
   font-size: 40px;
-  margin: 20px;
+  padding: 20px;
   color: #4CAF50;
   font-family: 'Roboto', sans-serif;
 }
@@ -244,4 +244,55 @@ h1 {
   margin: auto;
   margin-top: 50px;
   margin-bottom: 35px;
+}
+
+.sesion {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  width: 50%;
+  margin: auto;
+  margin-top: 35px;
+  margin-bottom: 35px;
+  border: 1px solid #c7c7c7 ;
+  box-shadow: 10px 10px 10px #333;
+  background-color: whitesmoke;
+}
+
+.campo{
+  width: 35%;
+  margin: auto;
+  margin-top: 25px;
+  padding: 10px;
+  border: 1px solid #4CAF50;
+  border-radius: 10px;
+}
+
+.sesion-button {
+  background-color: #4CAF50; /* Green */
+  border: 1px solid #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  transition-duration: 0.4s;
+  width: 24%;
+  margin: auto;
+  margin-top: 20px;
+}
+
+.sesion-button:hover {
+  background-color: white; /* Green */
+  color: #4CAF50;
+  border: 1px solid #4CAF50;
+}
+
+.switch-sesion{
+  background-color: whitesmoke;
+  border: none;
+  margin-top: 10px;
+  margin-bottom: 65px;
 }
